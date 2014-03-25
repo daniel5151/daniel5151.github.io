@@ -24,17 +24,21 @@ function circlePhys(obj) { //HOLY SHITSNACKS, THIS NEEDS A REWRITE
 
     // Gravity
     var fyGrav = obj.mass * Math.sin(uVars.gravity.angle) * uVars.gravity.accel;
-	var fxGrav = obj.mass * Math.cos(uVars.gravity.angle) * uVars.gravity.accel;
-	
-	// Apply Forces
-	obj.fy = fyGrav;
-	obj.fx = fxGrav;
-	
-	obj.dy += obj.fy / obj.mass;
-	obj.dx += obj.fx / obj.mass;
-	
-	// Apply Motion
-	obj.x += obj.dx/simSpeed/uVars.scale;
+    var fxGrav = obj.mass * Math.cos(uVars.gravity.angle) * uVars.gravity.accel;
+    
+    // Air Restitance
+    var fyDrag = -0.5 * obj.cDrag * obj.area * uVars.dFluid * obj.dy * obj.dy * (obj.dy / Math.abs(obj.dy));
+    var fxDrag = -0.5 * obj.cDrag * obj.area * uVars.dFluid * obj.dx * obj.dx * (obj.dx / Math.abs(obj.dx));
+    
+    // Apply Forces
+    obj.fy = fyGrav + fyDrag;
+    obj.fx = fxGrav + fxDrag;
+    
+    obj.dy += obj.fy / obj.mass;
+    obj.dx += obj.fx / obj.mass;
+    
+    // Apply Motion
+    obj.x += obj.dx/simSpeed/uVars.scale;
     obj.y += obj.dy/simSpeed/uVars.scale;
 
     // Store Coordinates
