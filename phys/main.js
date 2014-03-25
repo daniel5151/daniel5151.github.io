@@ -13,14 +13,13 @@ var objects = {};
 var uVars = {
     debug: false,
     fps: 60,
+    scale:5, // Pixels per meter
 
     maxObjects: 10,
 
-    gravity: {
-        strength: 5,
-        angle: 0.5 * Math.PI,
-        dx: 0,
-        dy: 5
+    gravity:{
+        accel:9.81,
+        angle:1.5*Math.PI,
     },
     simSpeed: 1,
 
