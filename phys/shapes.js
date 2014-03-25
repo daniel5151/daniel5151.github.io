@@ -15,6 +15,8 @@ var shapes = {
 		this.selected = false;
 		this.suspendPhysics = false;
 		this.density=1;
+		this.cDrag = 0.47; // Aerodynamics
+		this.restitution = -0.9;
 		
 		this.mass = this.density * this.r * this.r * Math.PI;
 		
