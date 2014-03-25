@@ -18,7 +18,8 @@ var shapes = {
 		this.cDrag = 0.47; // Aerodynamics
 		this.restitution = -0.9;
 		
-		this.mass = this.density * this.r * this.r * Math.PI;
+		this.area = this.r * this.r * Math.PI;
+		this.mass = this.density * this.area;
 		
 		this.ctx = canvas.ctx;
 
