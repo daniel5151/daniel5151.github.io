@@ -21,9 +21,9 @@ var uVars = {
         accel:9.81,
         angle:1.5*Math.PI,
     },
-    dFluid: 
+    dFluid: 1.22, // Air density - kg/m^3
     
-    simSpeed: 1.22, // Air density - kg/m^3
+    simSpeed: 1, 
 
     radius: 25,
     shapeColor: getRandomColor(),
