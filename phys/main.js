@@ -25,7 +25,7 @@ var uVars = {
     
     simSpeed: 1, 
 
-    radius: 25,
+    radius: 5,
     shapeColor: getRandomColor(),
     smiley: false,
     colorByHeight: false,
