@@ -4,89 +4,38 @@ function circlePhys(obj) { //HOLY SHITSNACKS, THIS NEEDS A REWRITE
     var h = canvas.h;
     var w = canvas.w;
 
-    //Apply Motion
-    obj.x += obj.dx / simSpeed;
-    obj.y += obj.dy / simSpeed;
-
     //Check if Out of Bounds
-    if (obj.y + obj.r > h) {
-        obj.y = h - obj.r;
-    }
-    if (obj.y - obj.r < 0) {
-        obj.y = 0 + obj.r;
-    }
-    if (obj.x + obj.r > w) {
-        obj.x = w - obj.r;
-    }
-    if (obj.x - obj.r < 0) {
-        obj.x = 0 + obj.r;
-    }
-
-    //Apply Border Friction
-    if (obj.prevCords[0][1] == h - obj.r && obj.prevCords[0][1] == obj.prevCords[1][1] && obj.prevCords[1][1] == obj.prevCords[2][1]) {
-        if (obj.dx > 0) {
-            obj.dx -= obj.friction;
-            if (Math.floor(Math.abs(obj.dx)) === 0) {
-                obj.dx = 0;
-            }
-        } else if (obj.dx < 0) {
-            obj.dx += obj.friction;
-            if (Math.ceil(Math.abs(obj.dx)) === 0) {
-                obj.dx = 0;
-            }
-        }
-    }
-    if (obj.prevCords[0][1] == 0 + obj.r && obj.prevCords[0][1] == obj.prevCords[1][1] && obj.prevCords[1][1] == obj.prevCords[2][1]) {
-        if (obj.dx > 0) {
-            obj.dx -= obj.friction;
-            if (Math.floor(Math.abs(obj.dx)) === 0) {
-                obj.dx = 0;
-            }
-        } else if (obj.dx < 0) {
-            obj.dx += obj.friction;
-            if (Math.ceil(Math.abs(obj.dx)) === 0) {
-                obj.dx = 0;
-            }
-        }
-    }
-    if (obj.prevCords[0][0] == w - obj.r && obj.prevCords[0][0] == obj.prevCords[1][0] && obj.prevCords[1][0] == obj.prevCords[2][0]) {
-        if (obj.dy > 0) {
-            obj.dy -= obj.friction;
-            if (Math.floor(Math.abs(obj.dy)) === 0) {
-                obj.dy = 0;
-            }
-        } else if (obj.dy < 0) {
-            obj.dy += obj.friction;
-            if (Math.ceil(Math.abs(obj.dy)) === 0) {
-                obj.dy = 0;
-            }
-        }
-    }
-    if (obj.prevCords[0][0] == 0 + obj.r && obj.prevCords[0][0] == obj.prevCords[1][0] && obj.prevCords[1][0] == obj.prevCords[2][0]) {
-        if (obj.dy > 0) {
-            obj.dy -= obj.friction;
-            if (Math.floor(Math.abs(obj.dy)) === 0) {
-                obj.dy = 0;
-            }
-        } else if (obj.dy < 0) {
-            obj.dy += obj.friction;
-            if (Math.ceil(Math.abs(obj.dy)) === 0) {
-                obj.dy = 0;
-            }
-        }
-    }
-
-    //Bounding Box Constraints
-    if (obj.y + obj.dy / simSpeed + obj.r > h || obj.y + obj.dy / simSpeed - obj.r < 0) {
+    if (obj.y+obj.r > h) {
+        obj.y=h-obj.r;
         obj.dy = -obj.dy;
     }
-    if (obj.x + obj.dx / simSpeed + obj.r > w || obj.x + obj.dx / simSpeed - obj.r < 0) {
+    if (obj.y-obj.r < 0) {
+        obj.y=0+obj.r;
+        obj.dy = -obj.dy;
+    }
+    if (obj.x+obj.r > w) {
+        obj.x=w-obj.r;
+        obj.dx = -obj.dx;
+    }
+    if (obj.x-obj.r < 0) {
+        obj.x=0+obj.r;
         obj.dx = -obj.dx;
     }
 
     // Gravity
-    obj.dx += uVars.gravity.dx;
-    obj.dy += uVars.gravity.dy;
+    var fyGrav = obj.mass * Math.sin(uVars.gravity.angle) * uVars.gravity.accel;
+	var fxGrav = obj.mass * Math.cos(uVars.gravity.angle) * uVars.gravity.accel;
+	
+	// Apply Forces
+	obj.fy = fyGrav;
+	obj.fx = fxGrav;
+	
+	obj.dy += obj.fy / obj.mass;
+	obj.dx += obj.fx / obj.mass;
+	
+	// Apply Motion
+	obj.x += obj.dx/simSpeed/uVars.scale;
+    obj.y += obj.dy/simSpeed/uVars.scale;
 
     // Store Coordinates
     obj.prevCords.push([obj.x, obj.y]);
