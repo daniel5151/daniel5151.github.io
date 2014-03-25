@@ -6,7 +6,7 @@ var shapes = {
 		this.color = 'grey';
 		this.x = 100;
 		this.y = 100;
-		this.r = 25;
+		this.r = 5;
 		this.dx = 0;
 		this.dy = 0;
 		this.friction = 0.5;
@@ -14,7 +14,10 @@ var shapes = {
 		this.id = 0;
 		this.selected = false;
 		this.suspendPhysics = false;
-
+		this.density=1;
+		
+		this.mass = this.density * this.r * this.r * Math.PI;
+		
 		this.ctx = canvas.ctx;
 
 		// customs
@@ -87,7 +90,7 @@ var shapes = {
 			var ctx = this.ctx;
 			ctx.beginPath();
 			ctx.strokeStyle = '#000000';
-			ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2, false);
+			ctx.arc(this.x, this.y, this.r * uVars.scale, 0, Math.PI * 2, false);
 			ctx.closePath();
 
 			if (this.colorByHeight) {
