@@ -13,7 +13,7 @@ var objects = {};
 var uVars = {
     debug: false,
     fps: 60,
-    scale:5, // Pixels per meter
+    scale: 5, // Pixels per meter
 
     maxObjects: 10,
 
@@ -21,7 +21,9 @@ var uVars = {
         accel:9.81,
         angle:1.5*Math.PI,
     },
-    simSpeed: 1,
+    dFluid: 
+    
+    simSpeed: 1.22, // Air density - kg/m^3
 
     radius: 25,
     shapeColor: getRandomColor(),
