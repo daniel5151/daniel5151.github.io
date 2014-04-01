@@ -5,20 +5,20 @@ function circlePhys(obj) { //HOLY SHITSNACKS, THIS NEEDS A REWRITE
     var w = canvas.w;
 
     //Check if Out of Bounds
-    if (obj.y+obj.r > h) {
-        obj.y=h-obj.r;
+    if (obj.y + obj.r * uVars.scale > h) {
+        obj.y = h - obj.r * uVars.scale;
         obj.dy = obj.dy * obj.restitution;
     }
-    if (obj.y-obj.r < 0) {
-        obj.y=0+obj.r;
+    if (obj.y - obj.r * uVars.scale < 0) {
+        obj.y = 0 + obj.r * uVars.scale;
         obj.dy = obj.dy * obj.restitution;
     }
-    if (obj.x+obj.r > w) {
-        obj.x=w-obj.r;
+    if (obj.x + obj.r * uVars.scale > w) {
+        obj.x = w - obj.r * uVars.scale;
         obj.dx = obj.dx * obj.restitution;
     }
-    if (obj.x-obj.r < 0) {
-        obj.x=0+obj.r;
+    if (obj.x - obj.r * uVars.scale < 0) {
+        obj.x = 0 + obj.r * uVars.scale;
         obj.dx = obj.dx * obj.restitution;
     }
 
