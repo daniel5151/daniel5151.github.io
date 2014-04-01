@@ -13,7 +13,7 @@ var objects = {};
 var uVars = {
     debug: false,
     fps: 60,
-    scale: 5, // Pixels per meter
+    scale: 120, // Pixels per meter
 
     maxObjects: 10,
 
@@ -25,7 +25,7 @@ var uVars = {
     
     simSpeed: 1, 
 
-    radius: 5,
+    radius: 0.15,
     shapeColor: getRandomColor(),
     smiley: false,
     colorByHeight: false,
@@ -76,8 +76,8 @@ $(document).ready(function () {
         x: 100,
         y: 100,
         r: uVars.radius,
-        dx: 10,
-        dy: 5,
+        dx: 0,
+        dy: 0,
         id: 0
     });
 

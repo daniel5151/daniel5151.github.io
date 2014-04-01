@@ -61,7 +61,7 @@ var auxTools = {
         obj.suspendPhysics = false;
         this.finalPos = [input.Cursor.x, input.Cursor.y];
         obj.dx = (reverse) ? (auxTools.finalPos[0] - auxTools.basePos[0]) / 5 : (auxTools.basePos[0] - auxTools.finalPos[0]) / 5;
-        obj.dy = (reverse) ? (auxTools.finalPos[1] - auxTools.basePos[1]) / 5 : (auxTools.basePos[1] - auxTools.finalPos[1]) / 5;
+        obj.dy = (!reverse) ? (auxTools.finalPos[1] - auxTools.basePos[1]) / 5 : (auxTools.basePos[1] - auxTools.finalPos[1]) / 5;
         this.basePos = [];
         this.finalPos = [];
     },

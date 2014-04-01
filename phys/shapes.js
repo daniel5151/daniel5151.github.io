@@ -6,7 +6,7 @@ var shapes = {
 		this.color = 'grey';
 		this.x = 100;
 		this.y = 100;
-		this.r = 5;
+		this.r = 0.15;
 		this.dx = 0;
 		this.dy = 0;
 		this.friction = 0.5;
@@ -17,6 +17,8 @@ var shapes = {
 		this.density=1;
 		this.cDrag = 0.47; // Aerodynamics
 		this.restitution = -0.9;
+		this.fx = 0;
+		this.fy = 0;
 		
 		this.area = this.r * this.r * Math.PI;
 		this.mass = this.density * this.area;

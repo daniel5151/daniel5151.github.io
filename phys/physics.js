@@ -7,19 +7,19 @@ function circlePhys(obj) { //HOLY SHITSNACKS, THIS NEEDS A REWRITE
     //Check if Out of Bounds
     if (obj.y+obj.r > h) {
         obj.y=h-obj.r;
-        obj.dy = -obj.dy;
+        obj.dy = obj.dy * obj.restitution;
     }
     if (obj.y-obj.r < 0) {
         obj.y=0+obj.r;
-        obj.dy = -obj.dy;
+        obj.dy = obj.dy * obj.restitution;
     }
     if (obj.x+obj.r > w) {
         obj.x=w-obj.r;
-        obj.dx = -obj.dx;
+        obj.dx = obj.dx * obj.restitution;
     }
     if (obj.x-obj.r < 0) {
         obj.x=0+obj.r;
-        obj.dx = -obj.dx;
+        obj.dx = obj.dx * obj.restitution;
     }
 
     // Gravity
@@ -30,16 +30,19 @@ function circlePhys(obj) { //HOLY SHITSNACKS, THIS NEEDS A REWRITE
     var fyDrag = -0.5 * obj.cDrag * obj.area * uVars.dFluid * obj.dy * obj.dy * (obj.dy / Math.abs(obj.dy));
     var fxDrag = -0.5 * obj.cDrag * obj.area * uVars.dFluid * obj.dx * obj.dx * (obj.dx / Math.abs(obj.dx));
     
+	fxDrag = (isNaN(fxDrag) ? 0 : fxDrag);
+	fyDrag = (isNaN(fyDrag) ? 0 : fyDrag);
+	
     // Apply Forces
     obj.fy = fyGrav + fyDrag;
     obj.fx = fxGrav + fxDrag;
-    
-    obj.dy += obj.fy / obj.mass;
-    obj.dx += obj.fx / obj.mass;
+	
+    obj.dy += obj.fy / obj.mass/simSpeed / uVars.fps;
+    obj.dx += obj.fx / obj.mass/simSpeed / uVars.fps;
     
     // Apply Motion
-    obj.x += obj.dx/simSpeed/uVars.scale;
-    obj.y += obj.dy/simSpeed/uVars.scale;
+    obj.x += obj.dx / simSpeed / uVars.fps * uVars.scale;
+    obj.y += -obj.dy / simSpeed / uVars.fps * uVars.scale;
 
     // Store Coordinates
     obj.prevCords.push([obj.x, obj.y]);
