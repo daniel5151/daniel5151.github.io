@@ -148,7 +148,7 @@ function updateVars() {
 	uVars.showVelocityLines = ($('#showVelocityLines').prop('checked')) ? true : false;
 
 	var randomRadius = ($('#randomRadius').prop('checked')) ? true : false;
-	uVars.radius = (randomRadius) ? Math.random() : parseFloat($("#radiusSlide").val(), 10);
+	uVars.radius = (randomRadius) ? Math.random()/2 : parseFloat($("#radiusSlide").val(), 10);
 
 	uVars.debug = ($('#debug').prop('checked')) ? true : false;
 

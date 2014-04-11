@@ -14,6 +14,7 @@ var shapes = {
 		this.id = 0;
 		this.selected = false;
 		this.suspendPhysics = false;
+		this.suspendForces = false;
 		this.density=1;
 		this.cDrag = 0.47; // Aerodynamics
 		this.restitution = -0.9;
@@ -22,6 +23,7 @@ var shapes = {
 		
 		this.area = this.r * this.r * Math.PI;
 		this.mass = this.density * this.area;
+		this.pixelr = this.r * uVars.scale;
 		
 		this.ctx = canvas.ctx;
 
@@ -142,7 +144,7 @@ var shapes = {
 		this.checkClick = function () {
 			var ctx = this.ctx;
 			ctx.beginPath();
-			ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2, false);
+			ctx.arc(this.x, this.y, this.r * uVars.scale, 0, Math.PI * 2, false);
 			ctx.closePath();
 			return (ctx.isPointInPath(input.Cursor.x, input.Cursor.y)) ? true : false;
 		};

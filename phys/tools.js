@@ -18,6 +18,8 @@ var auxTools = {
             }
             obj.dx = 0;
             obj.dy = 0;
+            obj.fx = 0;
+            obj.fy = 0;
 
             /* Drawing */
             draw.extraDraw.velocity = function () {
@@ -75,7 +77,7 @@ var auxTools = {
             this.finalPos = [input.Cursor.x - auxTools.offCentrePos.x, input.Cursor.y - auxTools.offCentrePos.y];
             obj.dx = (this.finalPos[0] - obj.returnCords()[0]) / 3;
             obj.dy = (this.finalPos[1] - obj.returnCords()[1]) / 3;
-
+            
             /* Drawing */
             draw.extraDraw.drag = function () {
                 // Drag Line
@@ -223,6 +225,7 @@ var tools = {
         onStart: function (selectedObj) {
             if (selectedObj !== null && handles.toolHandle === null) {
                 selectedObj.selected = true;
+				selectedObj.suspendForces = true;
                 auxTools.drag(selectedObj);
             }
         },
@@ -230,6 +233,7 @@ var tools = {
             if (handles.toolHandle !== null) {
                 if (selectedObj !== null) {
                     selectedObj.selected = false;
+					selectedObj.suspendForces = false;
                 }
                 clearInterval(handles.toolHandle);
                 handles.toolHandle = null;
