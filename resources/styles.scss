@@ -46,6 +46,15 @@ html {
 
 // main content styles
 
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 2em 0;
+  padding: 0;
+}
+
 .container {
   max-width: $card-width * 3.5 + $card-margin * 4 * 2;
   margin: auto;
