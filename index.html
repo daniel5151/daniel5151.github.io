@@ -25,8 +25,8 @@
                 - Daniel Prilik
     -->
     <div class="container">
-        <div class="aboutme">
-            <h1>Hi, I'm Daniel <span title="One benefit of a unique lastname is that prilik.com wasn't taken! Awesome!" style="color: #6699ff;">Prilik</span></h1>
+        <div class="content">
+            <h1>Hi, I'm Daniel <span title="One benefit of a unique lastname is that prilik.com wasn't already registered!" style="color: #6699ff;">Prilik</span></h1>
         </div>
         <div class="splash">
         <img
@@ -55,20 +55,21 @@
             title="March 31st 2019 - Taken at the top of Artist Point trail at Yosemite"
             alt="March 31st 2019 - A picture of me at the top of Artist Point trail at Yosemite">
         </div>
-        <div class="aboutme">
-            <p>I'm a passionate <b>Systems Programmer</b> who enjoys building robust, performant, and elegant low-level software. I've done my fair share of projects in C/C++, though nowadays, my language of choice has to be <b>Rust</b>.</p>
+        <div class="content">
+            <p>I'm a passionate <b>Systems Programmer</b> who enjoys building robust, performant, and elegant low-level software. I've done my fair share of projects in C, C++, and Javascript, though nowadays, my language of choice has to be 🦀 <b>Rust</b> 🦀.</p>
             <br>
-            <p>When I find the time, I enjoy working on various <b>open source</b> and <b>side-projects</b>. You can find links and info about some of the larger projects I've worked on <a href="#recent">below</a>. Check out my <a href="https://github.com/daniel5151">Github</a> profile for a more complete listing.</p>
-            <br>
-            <p>I graduated from the <b><span class="math-color" title="Half Math...">Software</span> <span class="eng-color" title="... and half Engineering!">Engineering</span></b> program at the <b>University of Waterloo</b> in April 2020.</p>
+            <p>Outside of work, I enjoy working on various <b>open source</b> and <b>side-projects</b>. You can find links and info about most of the projects I've worked on <a href="#recent">below</a>. For the most up-to-date info on what I've been working on, check out my <a href="https://github.com/daniel5151">Github</a> profile.</p>
 
             <hr>
 
-            <p>This coming August, I'll be moving out to <b>Seattle, WA</b> to work full-time on the Azure IoT team at <b>Microsoft</b>.</p>
+            <p>I'm currently based in <b>Seattle, WA</b>, working on the <b>Azure IoT Edge</b> team at <b>Microsoft</b>, where I'm writing a bunch of Rust code for the open-source <a href = "https://github.com/Azure/iotedge/tree/master/edgelet"><b>IoT Edge Security Daemon</b></a>.</p>
             <br>
-            <p>Over the course of my university degree, I had the chance to intern at a whole bunch of awesome companies. I've done...</p>
+            <p>I graduated from the <b><span class="math-color" title="Half Math...">Software</span> <span class="eng-color" title="... and half Engineering!">Engineering</span></b> program at the <b>University of Waterloo</b> in April 2020.</p>
+            <br>
+            <p>Over the course of my 5-year undergrad, I had the chance to intern at a whole bunch of awesome companies! I've done...</p>
             <br>
             <ul>
+                <li><b>OCI Container Infrastructure</b> at <i><a href="https://www.microsoft.com/"><b>Microsoft</b></a> - working on </i><i><a href="https://github.com/daniel5151/iotedge/tree/edgelet-shell/containrs">containrs</a></i></li>
                 <li><b>Hypervisor Development</b> at <i><a href="https://google.com/"><b>Google</b></a> - working on </i><i><a href="https://chromium.googlesource.com/chromiumos/platform/crosvm/">crosvm</a></i></li>
                 <li><b>Systems Programming</b> at <i><a href="https://www.apple.com/"><b>Apple</b></a></i></li>
                 <li><b>AAA Game Development</b> at <i><a href="https://thecoalitionstudio.com"><b>The Coalition</b></a> - working on Gears 5</i></li>
@@ -79,7 +80,7 @@
 
             <hr>
 
-            <p>I also have a <b><a href="blog">blog</a></b>, where I'll occasionally write about projects I've worked on, or technical topics I found interesting.</p>
+            <p>I also have a <b><a href="blog">blog</a></b> where I occasionally write about cool projects I've worked on, or technical topics I find interesting.</p>
             <p>Some posts I'm particularly proud of include:</p>
             <br>
             <ul>
@@ -103,16 +104,25 @@
             <p>Resume: <a href="resume/Daniel_Prilik_Resume_F2019.pdf">Fall 2019</a></p>
         </div>
 
-        <h1 id="recent">Highlighted Projects</h1>
-        <div class="projects big-projects">
+        <span id="recent"></span>
+        <div class="section-header">
+            <h1>Emulation</h1>
+            <p>When I was a kid, I loved playing retro games using emulators. As I grew up and learned more about computer architecture and low-level software engineering, I realized that I could totally write my own emulators, and since then, I've gone ahead written a whole bunch of them!</p>
+            <br>
+            <p>There's no better feeling than seeing software boot-up for the first time in an emulator you wrote yourself, especially after pouring countless hours into implementing all the underlying hardware :)</p>
+            <br>
+            <p>On a related note, I'm also quite interested in Virtualization, and was lucky enough to contribute to the <a href="https://chromium-review.googlesource.com/q/owner:prilik%2540google.com,50">crosvm</a> project while working as an intern at Google.</p>
+        </div>
+        <div class="projects">
             <div class="card">
-                <a href="ANESE/">
-                    <div class="title"><span style="padding: 0 24px;">ANESE + wideNES</span></div>
-                    <div class="img-container"><img src="resources/thumbs/anese.png"></div>
-                    <div class="year">2017-2018</div>
+                <div class="corner-ribbon--highlight corner-ribbon">Highlight</div>
+                <a href="https://github.com/daniel5151/clicky">
+                    <div class="title"><span>clicky</span></div>
+                    <div class="img-container"><img src="resources/thumbs/clicky.png"></div>
+                    <div class="year">2019+</div>
                 </a>
                 <div class="outer-text">
-                    <div class="inner-text">AKA: <em><b>A</b>nother <b>NES E</b>mulator.</em><br> The first emulator to implement <em>wideNES</em>, a technique to automatically map out NES games! Written in C++11</div>
+                    <div class="inner-text"> My most ambitious emulation project yet: The world's first (public) clickwheel iPod emulator. It's still very WIP, but it can already boot some homebrew iPod software!</div>
                 </div>
             </div>
             <div class="card">
@@ -122,27 +132,7 @@
                     <div class="year">2020</div>
                 </a>
                 <div class="outer-text">
-                    <div class="inner-text">A high-level emulator for the TS-7200 Single Board Computer, a relatively bespoke ARMv4t platform used in CS 452 - Real-Time Programming. Written in Rust</div>
-                </div>
-            </div>
-            <div class="card">
-                <a href="https://github.com/daniel5151/vrai-tracer">
-                    <div class="title"><span>vrai-tracer</span></div>
-                    <div class="img-container"><img src="resources/thumbs/vrai-tracer.png"></div>
-                    <div class="year">2019</div>
-                </a>
-                <div class="outer-text">
-                    <div class="inner-text">A simple ray-tracer written in Rust. Doubles as a testbed to experiment with various programming techniques and paradigms<br>(e.g: static vs. dynamic dispatch)</div>
-                </div>
-            </div>
-            <div class="card">
-                <a href="https://github.com/daniel5151/qmk_firmware">
-                    <div class="title"><span>QMK Firmware Contributions</span></div>
-                    <div class="img-container"><img style="padding: 16px;" src="resources/thumbs/qmk_icon.png"></div>
-                    <div class="year">2019</div>
-                </a>
-                <div class="outer-text">
-                    <div class="inner-text">QMK is an open source mechanical keyboard firmware. I've contributed several patches to the project, primarily improving RGB lighting effects.</div>
+                    <div class="inner-text">A high-level emulator for the TS-7200 Single Board Computer, a relatively bespoke ARMv4t platform used in CS 452 - Real-Time Programming. Written in Rust.</div>
                 </div>
             </div>
             <div class="card">
@@ -155,38 +145,15 @@
                     <div class="inner-text">A Rust-y rewrite of my old mips241 emulator. The code is cleaner, and supports new MIPS instructions (as used in CS 230). It even adds a <br><i>time traveling</i> debugger!</div>
                 </div>
             </div>
-        </div>
-
-        <h1>Older Projects</h1>
-        <div class="projects big-projects">
             <div class="card">
-                <a href="http://1212.rocks">
-                    <div class="title"><span>1212!</span></div>
-                    <div class="img-container"><img src="resources/thumbs/1212.PNG"></div>
-                    <div class="year">2015</div>
+                <div class="corner-ribbon--highlight corner-ribbon">Highlight</div>
+                <a href="ANESE/">
+                    <div class="title"><span style="padding: 0 24px;">ANESE + wideNES</span></div>
+                    <div class="img-container"><img src="resources/thumbs/anese.png"></div>
+                    <div class="year">2017-2018</div>
                 </a>
                 <div class="outer-text">
-                    <div class="inner-text">1212! is a simple little puzzle game I wrote back in high school.<br> It still receives several thousand visitors a month!</div>
-                </div>
-            </div>
-            <div class="card">
-                <a href="dicesiege/">
-                    <div class="title"><span>DiceSiege</span></div>
-                    <div class="img-container"><img src="resources/thumbs/map.png"></div>
-                    <div class="year">2015</div>
-                </a>
-                <div class="outer-text">
-                    <div class="inner-text">A small demo of a procedural map generation engine I wrote for a Risk-like strategy game. Rendered with Two.js.</div>
-                </div>
-            </div>
-            <div class="card">
-                <a href="early-projects/physics/">
-                    <div class="title"><span>Simple Physics Sim</span></div>
-                    <div class="img-container"><img src="resources/thumbs/phys.png"></div>
-                    <div class="year">2013-2014</div>
-                </a>
-                <div class="outer-text">
-                    <div class="inner-text">A simple physics sandbox written when I first started learning JS. It isn't terribly accurate or pretty, but it made for a great project to learn basic Javascript.</div>
+                    <div class="inner-text">AKA: <em><b>A</b>nother <b>NES E</b>mulator.</em><br> The first emulator to implement <em>wideNES</em>, a technique to automatically map out NES games! Written in C++11</div>
                 </div>
             </div>
             <div class="card">
@@ -211,8 +178,70 @@
             </div>
         </div>
 
-        <h1>Hackathon Projects</h1>
-        <div class="projects small-projects">
+        <div class="section-header">
+            <h1>Open Source</h1>
+            <p>Aside from the few projects highlighted below, I've also made plenty of smaller "drive-by" contributions to libraries/projects I found useful.</p>
+            <br>
+            <p> Check out my <a href="https://github.com/daniel5151">Github</a> profile for more info.</p>
+        </div>
+        <div class="projects">
+            <div class="card">
+                <div class="corner-ribbon--highlight corner-ribbon">Highlight</div>
+                <a href="https://github.com/daniel5151/gdbstub">
+                    <div class="title"><span>gdbstub</span></div>
+                    <div class="img-container"><img src="resources/thumbs/gdbstub.png"></div>
+                    <div class="year">2020+</div>
+                </a>
+                <div class="outer-text">
+                    <div class="inner-text">An ergonomic, easy-to-integrate, and low-footprint (no_std) implementation of the GDB Remote Serial Protocol in Rust.</div>
+                </div>
+            </div>
+            <div class="card">
+                <a href="https://github.com/qmk/qmk_firmware/pulls?q=author%3Adaniel5151">
+                    <div class="title"><span>QMK Firmware (contributor)</span></div>
+                    <div class="img-container"><img style="padding: 16px;" src="resources/thumbs/qmk_icon.png"></div>
+                    <div class="year">2019</div>
+                </a>
+                <div class="outer-text">
+                    <div class="inner-text">QMK is an open source mechanical keyboard firmware. I've worked to improve RGB lighting effects & systems, and I'm hoping to add Rust support to the project as well.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h1>One-Offs</h1>
+            <p>These don't really fit into any category, but they're still pretty neat little projects!</p>
+        </div>
+        <div class="projects">
+            <div class="card">
+                <a href="https://github.com/daniel5151/vrai-tracer">
+                    <div class="title"><span>vrai-tracer</span></div>
+                    <div class="img-container"><img src="resources/thumbs/vrai-tracer.png"></div>
+                    <div class="year">2019</div>
+                </a>
+                <div class="outer-text">
+                    <div class="inner-text">A simple ray-tracer written in Rust. Doubles as a testbed to experiment with various programming techniques and paradigms<br>(e.g: static vs. dynamic dispatch)</div>
+                </div>
+            </div>
+            <div class="card">
+                <a href="https://github.com/daniel5151/fusion-kbd-controller-rs">
+                    <div class="title"><span>fusion-kbd-controller-rs</span></div>
+                    <div class="img-container"><img src="resources/thumbs/kbd-control.jpg"></div>
+                    <div class="year">2018</div>
+                </a>
+                <div class="outer-text">
+                    <div class="inner-text">A small utility to configure the RGB keyboard on the Gigabyte Aero 15x. Involved reverse-engineering the proprietary USB protocol<br>(via Wireshark).</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h1>Hackathon Projects</h1>
+            <p>Ahh, the Hackathon. A whirlwind weekend of free pizza, soft drinks, and sleep deprivation.</p>
+            <br>
+            <p>These are some of the Hackathon projects that I'm particularly proud of. For a full list of all the hackathon experiments I've worked on (including <a href="https://devpost.com/software/dis-mah-jam">some really</a> <a href="https://devpost.com/software/intameme-js">dumb ones</a>), check out my <a href="https://devpost.com/daniel5151">Devpost</a> profile.</p>
+        </div>
+        <div class="projects">
             <div class="card">
                 <div class="corner-ribbon--winner corner-ribbon">WINNER</div>
                 <a href="https://devpost.com/software/nfinite-space">
@@ -252,18 +281,13 @@
             </div>
         </div>
 
-        <h1>Smaller Projects</h1>
-        <div class="projects small-projects">
-            <div class="card">
-                <a href="https://github.com/daniel5151/fusion-kbd-controller-rs">
-                    <div class="title"><span>fusion-kbd-controller-rs</span></div>
-                    <div class="img-container"><img src="resources/thumbs/kbd-control.jpg"></div>
-                    <div class="year">2018</div>
-                </a>
-                <div class="outer-text">
-                    <div class="inner-text">A small utility to configure the RGB keyboard on the Gigabyte Aero 15x. Involved reverse-engineering the proprietary USB protocol<br>(via Wireshark).</div>
-                </div>
-            </div>
+        <div class="section-header">
+            <h1>Older Javascript Projects</h1>
+            <p>I don't really work on too many projects in Javascript nowadays, but from ~2013-2017, Javascript was my go-to language!</p>
+            <br>
+            <p> Unlike most of my more recent infrastructure/hardware/low-level projects, these older projects tend to be much more visual and interactive, with most of them running directly in your web browser. Take a couple minutes to poke around, some of these projects are great little time wasters!</p>
+        </div>
+        <div class="projects">
             <div class="card">
                 <a href="branch-doodle/index.html">
                     <div class="title"><span>Branch Doodle</span></div>
@@ -291,7 +315,38 @@
                     <div class="year">2016</div>
                 </a>
                 <div class="outer-text">
-                    <div class="inner-text">This simple page uses WebBluetooth to control a multicolor LED lamp. WebAudio is also used to change color based on mic input.</div>
+                    <div class="inner-text">Using WebBluetooth to control a multicolor LED lamp + WebAudio to change color based on mic input.</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="corner-ribbon--highlight corner-ribbon">Highlight</div>
+                <a href="http://1212.rocks">
+                    <div class="title"><span>1212!</span></div>
+                    <div class="img-container"><img src="resources/thumbs/1212.PNG"></div>
+                    <div class="year">2015</div>
+                </a>
+                <div class="outer-text">
+                    <div class="inner-text">1212! is a simple little puzzle game I wrote back in high school.<br> It still receives several thousand visitors a month!</div>
+                </div>
+            </div>
+            <div class="card">
+                <a href="dicesiege/">
+                    <div class="title"><span>DiceSiege</span></div>
+                    <div class="img-container"><img src="resources/thumbs/map.png"></div>
+                    <div class="year">2015</div>
+                </a>
+                <div class="outer-text">
+                    <div class="inner-text">A small demo of a procedural map generation engine I wrote for a Risk-like strategy game. Rendered with Two.js.</div>
+                </div>
+            </div>
+            <div class="card">
+                <a href="early-projects/physics/">
+                    <div class="title"><span>Simple Physics Sim</span></div>
+                    <div class="img-container"><img src="resources/thumbs/phys.png"></div>
+                    <div class="year">2013-2014</div>
+                </a>
+                <div class="outer-text">
+                    <div class="inner-text">A simple physics sandbox written when I first started learning JS. It isn't terribly accurate or pretty, but it made for a great project to learn basic Javascript.</div>
                 </div>
             </div>
             <div class="card">
@@ -336,8 +391,8 @@
             </div>
         </div>
 
-        <h1>Lecture Notes</h1>
-        <div class="projects small-projects">
+        <h1>University Lecture Notes</h1>
+        <div class="projects">
             <div class="card small-card">
                 <a href="http://prilik.ca/cs137lecturenotes">
                     <div class="title"><span>CS-137</span></div>

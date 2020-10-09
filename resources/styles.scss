@@ -8,27 +8,27 @@ $bgr-foreground: #fff;
 
 // mixins
 @mixin transition($args...) {
-    -webkit-transition: $args;
-       -moz-transition: $args;
-        -ms-transition: $args;
-         -o-transition: $args;
-            transition: $args;
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
 }
 
 @mixin transform($args...) {
-    -webkit-transform: $args;
-       -moz-transform: $args;
-        -ms-transform: $args;
-         -o-transform: $args;
-            transform: $args;
+  -webkit-transform: $args;
+  -moz-transform: $args;
+  -ms-transform: $args;
+  -o-transform: $args;
+  transform: $args;
 }
 
 // font imports
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i");
 
 // broad styles
 body {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   margin: 0;
   background-color: $bgr-primary;
 }
@@ -59,7 +59,6 @@ hr {
   max-width: $card-width * 3.5 + $card-margin * 4 * 2;
   margin: auto;
   background-color: white;
-  margin-top: 20px;
   > {
     h1 {
       padding: 20px 30px;
@@ -78,7 +77,8 @@ a {
   }
 }
 
-h1, h3 {
+h1,
+h3 {
   font-weight: normal;
   text-align: center;
 }
@@ -106,9 +106,18 @@ h1, h3 {
   }
 }
 
-.aboutme {
+.content {
   padding: 30px;
   line-height: 1.44;
+}
+
+.section-header {
+  padding: 30px;
+  line-height: 1.44;
+  text-align: center;
+  h1 {
+    margin-bottom: 16px;
+  }
 }
 
 .pre-contact {
@@ -136,6 +145,7 @@ h1, h3 {
 // corner ribbon element
 
 .corner-ribbon {
+  font-size: 14px;
   line-height: 30px;
   position: absolute;
   top: 14px;
@@ -145,15 +155,19 @@ h1, h3 {
   @include transform(rotate(45deg));
   text-align: center;
   font-weight: bold;
-  letter-spacing: 1px;
   color: #f0f0f0;
-  background: #e82;
 }
 
 .corner-ribbon--winner {
   font-size: 14px;
   letter-spacing: initial;
-  background-color: #43A047;
+  background-color: #43a047;
+}
+
+.corner-ribbon--highlight {
+  font-size: 14px;
+  letter-spacing: initial;
+  background-color: #e82;
 }
 
 // main big card
@@ -171,13 +185,15 @@ h1, h3 {
   vertical-align: top;
   color: #272727;
   background: #fff;
-  box-shadow: 0 0px 2px 0 rgba(0,0,0,0.16), 0 0px 2px 0 rgba(0,0,0,0.12);
+  box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.16), 0 0px 2px 0 rgba(0, 0, 0, 0.12);
   border-radius: 2px;
   @include transition(background 0.25s);
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     background: $brg-secondary;
   }
-  &:focus .outer-text, &:hover .outer-text {
+  &:focus .outer-text,
+  &:hover .outer-text {
     @include transform(translateY(-129px));
   }
   .title {
@@ -246,7 +262,8 @@ h1, h3 {
   .outer-text {
     bottom: 30px;
   }
-  &:hover > .outer-text, &:focus > .outer-text {
+  &:hover > .outer-text,
+  &:focus > .outer-text {
     @include transform(translateY(-100%));
   }
   .year {
@@ -290,22 +307,19 @@ h1, h3 {
       font-size: 18px;
       height: 40px;
     }
-    &:hover > .outer-text, &:focus > .outer-text {
+    &:hover > .outer-text,
+    &:focus > .outer-text {
       @include transform(translateY(0));
     }
     .corner-ribbon {
-      font-weight: normal;
       top: 0;
       left: 0;
-      width: 48px;
+      width: 70px;
       height: 40px;
       line-height: 40px;
       border-right: 1px #b9b9b9 solid;
       box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
       @include transform(rotate(0deg));
-    }
-    .corner-ribbon--winner {
-      width: 65px;
     }
   }
 
