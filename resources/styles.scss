@@ -5,6 +5,7 @@ $card-margin: 12px;
 $bgr-primary: #eeeeec;
 $brg-secondary: #f6f6f5;
 $bgr-foreground: #fff;
+$highlight: #3949ab;
 
 // mixins
 @mixin transition($args...) {
@@ -69,8 +70,12 @@ hr {
   }
 }
 
+.highlight-color {
+  color: $highlight;
+}
+
 a {
-  color: #6699ff;
+  color: $highlight;
   text-decoration: none;
   &:hover {
     text-decoration: underline;
@@ -118,10 +123,6 @@ h3 {
   h1 {
     margin-bottom: 16px;
   }
-}
-
-.pre-contact {
-  padding: 20px 30px;
 }
 
 .contact {

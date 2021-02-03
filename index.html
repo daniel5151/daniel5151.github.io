@@ -9,15 +9,14 @@
     <meta property="og:site_name" content="Daniel Prilik, Software Engineer">
     <meta property="og:url" content="http://prilik.com/">
     <meta property="og:description" content="Daniel Prilik, Software Engineer">
-    <title>Daniel Prilik - Software Engineer</title>
+    <title>Daniel Prilik</title>
     <link rel="stylesheet" href="resources/styles.css">
 </head>
 
 <body>
     <!--
-    If you were looking for a bunch of JavaScript on this page, I'm sorry to disappoint!
     Aside from a little bit of Google analytics, there isn't a lick of JS on this page!
-    It's all handwritten HTML and (S)CSS, which keeps things light and fast.
+    It's all handwritten HTML and (S)CSS, which should keep things light and fast.
 
     "Sometimes the best code is no code at all."
         - Jeff Atwood
@@ -26,7 +25,24 @@
     -->
     <div class="container">
         <div class="content">
-            <h1>Hi, I'm Daniel <span title="One benefit of a unique lastname is that prilik.com wasn't already registered!" style="color: #6699ff;">Prilik</span></h1>
+            <h1>Hi, I'm Daniel <span title="The nice thing about having a unique last name is that prilik.com wasn't registered yet!" class="highlight-color">Prilik</span> 👋</h1>
+            <div style="
+                text-align: center;
+                font-weight: bold;
+                justify-content: space-evenly;
+                display: flex;
+                max-width: 300px;
+                margin: 16px auto 0 auto;
+
+            ">
+                <a href="https://github.com/daniel5151">github</a>
+                <span>|</span>
+                <a href="https://prilik.com/resume/Daniel_Prilik_Resume_F2019.pdf">resume</a>
+                <span>|</span>
+                <a href="blog">blog</a>
+                <span>|</span>
+                <a href="#recent">projects</a>
+            </div>
         </div>
         <div class="splash">
         <img
@@ -56,28 +72,27 @@
             alt="March 31st 2019 - A picture of me at the top of Artist Point trail at Yosemite">
         </div>
         <div class="content">
-            <p>I'm a passionate <b>Systems Programmer</b> who enjoys building robust, performant, and elegant low-level software. I've done my fair share of projects in C, C++, and Javascript, though nowadays, my language of choice has to be 🦀 <b>Rust</b> 🦀.</p>
+            <p>I'm a passionate <b>Systems Programmer</b> who enjoys building robust, performant, and elegant low-level software. I've done my fair share of projects in C, C++, and JavaScript, though nowadays, my language of choice has to be 🦀 <b>Rust</b> 🦀.</p>
             <br>
             <p>Outside of work, I enjoy working on various <b>open source</b> and <b>side-projects</b>. You can find links and info about most of the projects I've worked on <a href="#recent">below</a>. For the most up-to-date info on what I've been working on, check out my <a href="https://github.com/daniel5151">Github</a> profile.</p>
 
             <hr>
 
-            <p>I'm currently based in <b>Seattle, WA</b>, working on the <b>Azure IoT Edge</b> team at <b>Microsoft</b>, where I'm writing a bunch of Rust code for the open-source <a href = "https://github.com/Azure/iotedge/tree/master/edgelet"><b>IoT Edge Security Daemon</b></a>.</p>
+            <p>I'm currently based in <b>Seattle, WA</b>, working on the <b><a href="https://github.com/Azure/iotedge">Azure IoT Edge</a></b> team at <b>Microsoft</b>. I spend most of my work days writing open-source Rust code for our various products.</p>
             <br>
             <p>I graduated from the <b><span class="math-color" title="Half Math...">Software</span> <span class="eng-color" title="... and half Engineering!">Engineering</span></b> program at the <b>University of Waterloo</b> in April 2020.</p>
             <br>
-            <p>Over the course of my 5-year undergrad, I had the chance to intern at a whole bunch of awesome companies! I've done...</p>
+            <p>Over the course of my 5-year undergrad, I worked at a bunch of awesome companies! I've done...</p>
             <br>
             <ul>
-                <li><b>OCI Container Infrastructure</b> at <i><a href="https://www.microsoft.com/"><b>Microsoft</b></a> - working on </i><i><a href="https://github.com/daniel5151/iotedge/tree/edgelet-shell/containrs">containrs</a></i></li>
+                <li><b>Container Infrastructure</b> at <i><a href="https://www.microsoft.com/"><b>Microsoft</b></a> - working on </i><i><a href="https://github.com/daniel5151/iotedge/tree/edgelet-shell/containrs">containrs</a></i></li>
                 <li><b>Hypervisor Development</b> at <i><a href="https://google.com/"><b>Google</b></a> - working on </i><i><a href="https://chromium.googlesource.com/chromiumos/platform/crosvm/">crosvm</a></i></li>
                 <li><b>Systems Programming</b> at <i><a href="https://www.apple.com/"><b>Apple</b></a></i></li>
                 <li><b>AAA Game Development</b> at <i><a href="https://thecoalitionstudio.com"><b>The Coalition</b></a> - working on Gears 5</i></li>
                 <li><b>Full-Stack Web Development</b> at <i><a href="https://www.lcbonext.com/"><b>LCBO|next</b></a></i> and <i><a href="https://polar.me/"><b>Polar</b></a></i></li>
             </ul>
             <br>
-            Check out my <a href="resume/Daniel_Prilik_Resume_F2019.pdf">resume</a> for more details.
-
+            <p>Check out my <a href="resume/Daniel_Prilik_Resume_F2019.pdf">resume</a> for more details.</p>
             <hr>
 
             <p>I also have a <b><a href="blog">blog</a></b> where I occasionally write about cool projects I've worked on, or technical topics I find interesting.</p>
@@ -88,6 +103,11 @@
                     <b><a href="blog/wideNES">wideNES - Peeking Past the Edge of NES Games</a></b>
                     <br>
                     An explanation and exploration of <i>wideNES</i>, a novel technique I came up with to automatically and interactively map-out NES games in real time. This writeup hit the front-page of <a href="https://news.ycombinator.com/item?id=17856734">Hacker News</a>, and was covered on several tech news sites! (<i><a href="https://arstechnica.com/gaming/2018/08/widenes-emulation-expands-nes-scenes-past-the-usual-sd-screen-borders/">Ars Technica</a></i>, <i><a href="https://hackaday.com/2018/08/30/metroid-zelda-and-castelvania-auto-mapped-with-nes-emulation-heuristics/">Hackaday</a></i>, <i><a href="https://www.kotaku.com.au/2018/09/widenes-lets-you-play-classic-nintendo-games-like-never-before/">Kotaku</a></i>). It also directly inspired <a href="https://kemenaran.winosx.com/posts/widegb-playing-game-boy-games-on-wide-screens/">WideGB</a>, a project which brought the wideNES technique to the Gameboy/Gameboy Color!
+                </li>
+                <li style="margin-bottom: 8px;">
+                    <b><a href="blog/post/emoji-shortcodes">A Quest to Find a Highly Compressed Emoji :shortcode: Lookup Function</a></b>
+                    <br>
+                    A lighthearted writeup about my adventures in optimizing a :shortcode: to emoji lookup function to take up the least amount of static storage (code + data) as possible. I ended up going down a bit of a rabbit hole learning about perfect hashing, probabilistic data structures, and 2D dynamic programming algorithms, and I thought it'd be fun to share what I learned with other folks 😄
                 </li>
                 <li>
                     <b><a href="blog/2019/05/16/crosvm-paravirt.html">Paravirtualized Devices in crosvm - a Performance Panacea for Modern Virtual Machines</a></b>
@@ -107,9 +127,9 @@
         <span id="recent"></span>
         <div class="section-header">
             <h1>Emulation</h1>
-            <p>When I was a kid, I loved playing retro games using console emulators. As I grew up and learned more about computer architecture and low-level software engineering, I realized that I could totally write my own emulators, and since then, I've gone on to write a whole bunch of them!</p>
+            <p>Growing up, I loved playing retro games on my PC using emulators like Nestopia, Snes9x, Dolphin, etc... As I learned more about computer architecture and low-level programming, I discovered that I loved writing emulators as well!</p>
             <br>
-            <p>On a related note, I'm also quite interested in Virtualization, and even got the chance to contribute to the <a href="https://chromium-review.googlesource.com/q/owner:prilik%2540google.com,50">crosvm</a> project while working as an intern at Google.</p>
+            <p>I'm also quite interested in Virtualization, and even got the chance to contribute to <a href="https://chromium-review.googlesource.com/q/owner:prilik%2540google.com,50">crosvm</a> while interning at Google.</p>
         </div>
         <div class="projects">
             <div class="card">
@@ -258,9 +278,12 @@
 
         <div class="section-header">
             <h1>Hackathon Projects</h1>
-            <p>Ahh, the Hackathon. A whirlwind weekend of free pizza, soft drinks, and sleep deprivation.</p>
+            <p>Ahh, the Hackathon.</p>
             <br>
-            <p>These are some of the Hackathon projects that I'm particularly proud of. For a full list of all the hackathon experiments I've worked on (including <a href="https://devpost.com/software/dis-mah-jam">some really</a> <a href="https://devpost.com/software/intameme-js">dumb ones</a>), check out my <a href="https://devpost.com/daniel5151">Devpost</a> profile.</p>
+            <p>A whirlwind weekend of free pizza, soft drinks, and sleep deprivation.</p>
+            <p>Truly a quintessential part of the CS undergraduate experience!</p>
+            <br>
+            <p>Here are some of the Hackathon projects that I'm particularly proud of. For a full list of all the hackathon "experiments" I've worked on (including some <a href="https://devpost.com/software/dis-mah-jam">really</a> <a href="https://devpost.com/software/intameme-js">dumb</a> ones), check out my <a href="https://devpost.com/daniel5151">Devpost</a> profile.</p>
         </div>
         <div class="projects">
             <div class="card">
@@ -303,10 +326,10 @@
         </div>
 
         <div class="section-header">
-            <h1>Older Javascript Projects</h1>
-            <p>I don't really work on too many projects in Javascript nowadays, but from ~2013-2017, Javascript was my go-to language!</p>
+            <h1>Older JavaScript Projects</h1>
+            <p>I don't really work with JavaScript much these days, but from ~2013 to 2017, JavaScript was my go-to language!</p>
             <br>
-            <p> Unlike most of my more recent infrastructure/hardware/low-level projects, these older projects tend to be much more visual and interactive, with most of them running directly in your web browser. Take a couple minutes to poke around, some of these projects are great little time wasters!</p>
+            <p> Unlike most of my more recent infrastructure/hardware/low-level work, these older projects tend to be much more visual and interactive. If you've got some time to kill, some of these projects can be great little time wasters!</p>
         </div>
         <div class="projects">
             <div class="card">
@@ -357,7 +380,7 @@
                     <div class="year">2013-2014</div>
                 </a>
                 <div class="outer-text">
-                    <div class="inner-text">A simple physics sandbox written when I first started learning JS. It isn't terribly accurate or pretty, but it made for a great project to learn basic Javascript.</div>
+                    <div class="inner-text">A simple physics sandbox written when I first started learning JS. It isn't terribly accurate or pretty, but it made for a great project to learn basic JavaScript.</div>
                 </div>
             </div>
             <div class="card">
@@ -426,20 +449,13 @@
             </div>
         </div>
 
-        <div class="pre-contact">
-            <p>So, anything pique your interest?</p>
-            <br>
-            <p style="font-size: 1.5em;"><b>Contact Me!</b></p>
-        </div>
-
-        <div class="contact">
-            <br>
+        <div class="content" style="text-align: center;">
             <p>Email: <a href="mailto:daniel@prilik.com">daniel@prilik.com</a></p>
             <p>GitHub: <a href="https://github.com/daniel5151">daniel5151</a></p>
-            <p style="text-align: right; padding: 20px 0;">
-                Hosted with Github Pages
-            </p>
+            <br>
+            <p>Hosted with Github Pages</p>
         </div>
+
     </div>
     <!-- Just a little bit of tracking... Sorry! -->
     <script async="" src="//www.google-analytics.com/analytics.js"></script><script>
