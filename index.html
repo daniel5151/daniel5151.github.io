@@ -46,9 +46,9 @@
         </div>
         <div class="splash">
             <img
-                src="resources/splash/hawaii_2021.jpg"
-                title="Nov 9th 2021 - Kuliouou Ridge Trail on the Hawaiian island of O'ahu"
-                alt="Nov 9th 2021 - A picture of me looking like a doofus, taken at Kuliouou Ridge Trail on the Hawaiian island of O'ahu">
+                src="resources/splash/antelope_canyon-min.jpg"
+                title="May 31st 2022 - Antelope Canyon, Arizona"
+                alt="May 31st 2022 - A picture of me looking kinda cool with a mask on out in Antelope Canyon, Arizona">
         </div>
         <div class="content">
             <p>I'm a <b>Systems Programmer</b> who builds robust, performant, and elegant low-level software. I've done my fair share of projects in C, C++, and JavaScript, though nowadays, I pretty much only use 🦀 <b>Rust</b> 🦀.</p>
@@ -92,6 +92,46 @@
 
         <span id="recent"></span>
         <div class="section-header">
+            <h1>Notable Open Source Projects</h1>
+            <p>These projects all have at least one thing in common: they are still actively being used by folks to this day!</p>
+            <br>
+            <p>Sure, the other projects I've worked on are cool and all, but the community aspect makes these projects a bit more special :)</p>
+        </div>
+        <div class="projects">
+            <div class="card">
+                <div class="corner-ribbon--highlight corner-ribbon">Highlight</div>
+                <a href="https://github.com/daniel5151/gdbstub">
+                    <div class="title"><span>gdbstub</span></div>
+                    <div class="img-container"><img src="resources/thumbs/gdbstub.png"></div>
+                    <div class="year">2020+</div>
+                </a>
+                <div class="outer-text">
+                    <div class="inner-text">An ergonomic, easy-to-integrate, low-footprint, no_std, no-panic implementation of the GDB Remote Serial Protocol in Rust.</div>
+                </div>
+            </div>
+            <div class="card">
+                <a href="https://github.com/daniel5151/surface-dial-linux">
+                    <div class="title"><span>surface-dial-linux</span></div>
+                    <div class="img-container"><img src="resources/thumbs/surface-dial.png"></div>
+                    <div class="year">2020</div>
+                </a>
+                <div class="outer-text">
+                    <div class="inner-text">A Linux userspace controller for the Microsoft Surface Dial. Translates raw HID and evdev events into simulated mouse/keyboard inputs. It also supports haptic feedback!</div>
+                </div>
+            </div>
+            <div class="card">
+                <a href="https://github.com/qmk/qmk_firmware/pulls?q=author%3Adaniel5151">
+                    <div class="title"><span>QMK Firmware (contributor)</span></div>
+                    <div class="img-container"><img style="padding: 16px;" src="resources/thumbs/qmk_icon.png"></div>
+                    <div class="year">2019</div>
+                </a>
+                <div class="outer-text">
+                    <div class="inner-text">QMK is an open source mechanical keyboard firmware. I've worked to improve RGB lighting effects & systems, and I'm hoping to add Rust support to the project as well.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header">
             <h1>Emulation</h1>
             <p>Growing up, I loved playing retro games on my PC using emulators, and as I learned more about computer architecture and low-level programming, I discovered that I loved writing emulators as well!</p>
             <br>
@@ -106,7 +146,7 @@
                     <div class="year">2019+</div>
                 </a>
                 <div class="outer-text">
-                    <div class="inner-text"> My most ambitious emulation project yet: The world's first (public) clickwheel iPod emulator. It's still very WIP, but it can already boot some homebrew iPod software!</div>
+                    <div class="inner-text">As far as I can tell, this is the world's first (public) clickwheel iPod emulator. It's very WIP, but it can already boot some homebrew!</div>
                 </div>
             </div>
             <div class="card">
@@ -163,50 +203,10 @@
         </div>
 
         <div class="section-header">
-            <h1>Open Source</h1>
-            <p>Aside from the few projects highlighted below, I've also made plenty of smaller "drive-by" contributions to libraries/projects I found useful.</p>
-            <br>
-            <p> Check out my <a href="https://github.com/daniel5151">Github</a> profile's contribution activity for more details.</p>
-        </div>
-        <div class="projects">
-            <div class="card">
-                <div class="corner-ribbon--highlight corner-ribbon">Highlight</div>
-                <a href="https://github.com/daniel5151/gdbstub">
-                    <div class="title"><span>gdbstub</span></div>
-                    <div class="img-container"><img src="resources/thumbs/gdbstub.png"></div>
-                    <div class="year">2020+</div>
-                </a>
-                <div class="outer-text">
-                    <div class="inner-text">An ergonomic, easy-to-integrate, low-footprint, no_std, no-panic implementation of the GDB Remote Serial Protocol in Rust.</div>
-                </div>
-            </div>
-            <div class="card">
-                <a href="https://github.com/qmk/qmk_firmware/pulls?q=author%3Adaniel5151">
-                    <div class="title"><span>QMK Firmware (contributor)</span></div>
-                    <div class="img-container"><img style="padding: 16px;" src="resources/thumbs/qmk_icon.png"></div>
-                    <div class="year">2019</div>
-                </a>
-                <div class="outer-text">
-                    <div class="inner-text">QMK is an open source mechanical keyboard firmware. I've worked to improve RGB lighting effects & systems, and I'm hoping to add Rust support to the project as well.</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section-header">
             <h1>One-Offs</h1>
-            <p>These don't really fit into any category, but they're still pretty neat little projects!</p>
+            <p>These projects don't really fit into any other category, but they're still pretty neat little projects!</p>
         </div>
         <div class="projects">
-            <div class="card">
-                <a href="https://github.com/daniel5151/surface-dial-linux">
-                    <div class="title"><span>surface-dial-linux</span></div>
-                    <div class="img-container"><img src="resources/thumbs/surface-dial.png"></div>
-                    <div class="year">2020</div>
-                </a>
-                <div class="outer-text">
-                    <div class="inner-text">A Linux userspace controller for the Microsoft Surface Dial. Translates raw HID and evdev events into simulated mouse/keyboard inputs. It also supports haptic feedback!</div>
-                </div>
-            </div>
             <div class="card">
                 <a href="https://github.com/daniel5151/vrai-tracer">
                     <div class="title"><span>vrai-tracer</span></div>
@@ -217,9 +217,6 @@
                     <div class="inner-text">A simple ray-tracer written in Rust. Doubles as a testbed to experiment with various programming techniques and paradigms<br>(e.g: static vs. dynamic dispatch)</div>
                 </div>
             </div>
-
-            <br>
-
             <div class="card">
                 <a href="https://github.com/daniel5151/fusion-kbd-controller-rs">
                     <div class="title"><span>fusion-kbd-controller-rs</span></div>
